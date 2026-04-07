@@ -1,38 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-      <meta charset="UTF-8">
-      <title>PortfolioLanding</title>
-      <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="UTF-8">
+    <title>PortfolioLanding</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
 
-      <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
-      <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
-      <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-            referrerpolicy="no-referrer" />
-
-      <script defer src="js/main.js"></script>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
+      rel="stylesheet"
+    >
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      referrerpolicy="no-referrer"
+    >
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css"
+    >
   </head>
+
   <body id="top">
     <nav class="nav" id="top">
       <div class="container nav__inner">
-        <a class="nav__brand" href="#top" aria-label="Voltar ao topo">
-        </a>
+        <a
+          class="nav__brand"
+          href="#top"
+          aria-label="Back to top"
+          data-i18n-aria-label="nav.backToTop"
+        ></a>
 
         <div class="nav__links">
-          <a class="nav__link" href="#about">About</a>
-          <a class="nav__link" href="#work">Work</a>
-          <a class="nav__link nav__link--btn" href="#contact">Contact</a>
-          <a class="nav__logo" href="#top" aria-label="Back to top">
+          <a class="nav__link" href="#about" data-i18n="nav.about">About</a>
+          <a class="nav__link" href="#work" data-i18n="nav.work">Work</a>
+          <a class="nav__link nav__link--btn" href="#contact" data-i18n="nav.contact">Contact</a>
+
+          <div
+            class="nav__langs language-switcher"
+            aria-label="Language selector"
+            data-i18n-aria-label="nav.languageSelector"
+          >
+            <a
+              href="#"
+              class="lang-flag lang-pt is-active"
+              aria-label="Português do Brasil"
+              title="Português do Brasil"
+              data-i18n-aria-label="languages.pt"
+              data-i18n-title="languages.pt"
+            >
+              <span class="fi fi-br"></span>
+            </a>
+
+            <a
+              href="#"
+              class="lang-flag lang-es"
+              aria-label="Español"
+              title="Español"
+              data-i18n-aria-label="languages.es"
+              data-i18n-title="languages.es"
+            >
+              <span class="fi fi-es"></span>
+            </a>
+
+            <a
+              href="#"
+              class="lang-flag lang-en"
+              aria-label="English"
+              title="English"
+              data-i18n-aria-label="languages.en"
+              data-i18n-title="languages.en"
+            >
+              <span class="fi fi-us"></span>
+            </a>
+          </div>
+
+          <a
+            class="nav__logo"
+            href="#top"
+            aria-label="Back to top"
+            data-i18n-aria-label="nav.backToTop"
+          >
             <img
               src="assets/images/logo.svg"
               alt="RL logo"
               class="logo-svg"
-            />
+            >
           </a>
         </div>
       </div>
@@ -41,34 +98,80 @@
     <header class="hero hero--enter">
       <div class="container hero__grid">
         <div class="hero__copy">
-          <p class="hero__kicker hero-anim" style="--d: 0ms">Hello, my name is</p>
+          <p
+            class="hero__kicker hero-anim"
+            style="--d: 0ms"
+            data-i18n="hero.kicker"
+          >
+            Hello, my name is
+          </p>
 
           <h1 class="hero__title hero-anim" style="--d: 90ms">
             Rodrigo Leocádio<span class="dot">.</span>
           </h1>
 
-          <h2 class="hero__subtitle hero-anim" style="--d: 180ms">I build web products.</h2>
+          <h2
+            class="hero__subtitle hero-anim"
+            style="--d: 180ms"
+            data-i18n="hero.subtitle"
+          >
+            I build web products.
+          </h2>
 
-          <p class="hero__desc hero-anim" style="--d: 270ms">
+          <p
+            class="hero__desc hero-anim"
+            style="--d: 270ms"
+            data-i18n="hero.desc"
+          >
             Full-Stack developer, product-minded, ex-sales leader, lifelong learner.
           </p>
 
-          <div class="hero__social hero-anim" style="--d: 360ms" aria-label="Redes sociais">
-            <a class="social social--whatsapp" href="https://wa.me/5581994522790?text=Hi!%20I%20came%20across%20your%20portfolio%20and%20would%20love%20to%20connect." target="_blank" rel="noreferrer" aria-label="WhatsApp">
+          <div
+            class="hero__social hero-anim"
+            style="--d: 360ms"
+            aria-label="Social links"
+            data-i18n-aria-label="hero.socialAria"
+          >
+            <a
+              class="social social--whatsapp"
+              href="https://wa.me/5581994522790?text=Hi!%20I%20came%20across%20your%20portfolio%20and%20would%20love%20to%20connect."
+              target="_blank"
+              rel="noreferrer"
+              aria-label="WhatsApp"
+            >
               <i class="fa-brands fa-whatsapp"></i>
             </a>
 
-            <a class="social social--instagram" href="https://www.instagram.com/rd_leocadio/" target="_blank" rel="noreferrer" aria-label="Instagram">
+            <a
+            class="social social--linkedin"
+            href="https://www.linkedin.com/in/rdleocadio/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="LinkedIn"
+            >
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+
+            <a
+              class="social social--github"
+              href="https://github.com/rdleocadio"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="GitHub"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a
+              class="social social--instagram"
+              href="https://www.instagram.com/rd_leocadio/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Instagram"
+            >
               <i class="fa-brands fa-instagram"></i>
             </a>
 
-            <a class="social social--linkedin" href="https://www.linkedin.com/in/rdleocadio/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-              <i class="fa-brands fa-linkedin"></i>
-            </a>
-
-            <a class="social social--github" href="https://github.com/rdleocadio" target="_blank" rel="noreferrer" aria-label="GitHub">
-              <i class="fa-brands fa-github"></i>
-            </a>
           </div>
         </div>
 
@@ -88,6 +191,7 @@
           </div>
         </div>
       </div>
+
       <div class="hero-divider" aria-hidden="true"></div>
     </header>
 
@@ -96,40 +200,41 @@
       <section class="section section--enter" id="about">
         <div class="container">
           <div class="section__head reveal">
-            <h3 class="section__title">Who I am</h3>
+            <h3 class="section__title" data-i18n="about.title">Who I am</h3>
           </div>
 
           <div class="about reveal">
-            <p>
+            <p data-i18n="about.p1" data-i18n-html="true">
               I’m a <strong>full-stack developer</strong> with a background in business and product, focused on building clear,
               performant web applications. I enjoy working across the stack, translating real problems into simple, well-structured solutions with clean code and thoughtful user experience.
             </p>
 
-            <p>
+            <p data-i18n="about.p2">
               I’m a curious and organized problem solver, with strong communication skills and attention to detail.
               I’m particularly interested in building products that are easy to use, maintain, and evolve over time.
             </p>
 
-            <p>
+            <p data-i18n="about.p3" data-i18n-html="true">
               Currently working as a <strong>freelance</strong> web developer and as an AI software development teaching assistant at <strong>Le Wagon</strong>.
             </p>
           </div>
 
           <div class="tools reveal">
-            <h4 class="tools__title">Tools &amp; Technologies</h4>
+            <h4 class="tools__title" data-i18n="about.tools">Tools &amp; Technologies</h4>
 
             <div class="tools__grid">
               <div class="tool tool--ruby"><i class="fa-solid fa-gem"></i><span>Ruby</span></div>
               <div class="tool tool--rails"><i class="fa-solid fa-gem"></i><span>Ruby on Rails</span></div>
+              <div class="tool tool--js"><i class="fa-brands fa-js"></i><span>JavaScript</span></div>
               <div class="tool tool--html"><i class="fa-brands fa-html5"></i><span>HTML5</span></div>
               <div class="tool tool--css"><i class="fa-brands fa-css3-alt"></i><span>CSS3</span></div>
-              <div class="tool tool--js"><i class="fa-brands fa-js"></i><span>JavaScript</span></div>
               <div class="tool tool--sql"><i class="fa-solid fa-database"></i><span>SQL</span></div>
               <div class="tool tool--github"><i class="fa-brands fa-github"></i><span>GitHub</span></div>
               <div class="tool tool--vscode"><i class="fa-solid fa-code"></i><span>VS Code</span></div>
             </div>
           </div>
         </div>
+
         <div class="section-divider" aria-hidden="true"></div>
       </section>
 
@@ -137,8 +242,8 @@
       <section class="section section--enter" id="work">
         <div class="container">
           <div class="section__head reveal">
-            <h3 class="section__title">What I've done</h3>
-            <p class="section__subtitle">
+            <h3 class="section__title" data-i18n="work.title">What I've done</h3>
+            <p class="section__subtitle" data-i18n="work.subtitle">
               Selected projects focusing on UI, interaction and problem-solving.
             </p>
           </div>
@@ -148,109 +253,190 @@
             <article class="project-row reveal">
               <img
                 src="assets/images/project-1.jpg"
-                alt="Find Your Plants"
+                alt="Instituto Educa preview"
                 class="project-image"
-              />
+              >
 
               <div class="project-text">
-                <h4>Routine Care</h4>
-                <p>
-                  A web application designed to help families manage care routines, appointments, and daily responsibilities in one place.
-                </p><br>
-                <a href="https://github.com/mauriciocastelobranco/routine-care" target="_blank" rel="noreferrer"><strong>View on GitHub</strong></a>
+                <h4 data-i18n="work.project1.title">Instituto Educa</h4>
+                <p data-i18n="work.project1.desc">
+                  A responsive website built for a non-profit, focused on accessibility, content structure, and user experience.
+                </p>
+
+                <div class="project-links">
+                  <a href="https://institutoeduca.org/" target="_blank" rel="noreferrer">
+                    <strong data-i18n="work.project1.live">Visit site</strong>
+                  </a>
+                  <a href="https://github.com/rdleocadio/instituto_educa" target="_blank" rel="noreferrer">
+                    <strong data-i18n="work.project1.github">View on GitHub</strong>
+                  </a>
+                </div>
               </div>
             </article>
 
-            <!-- Project 2 (imagem do outro lado) -->
+            <!-- Project 2 -->
             <article class="project-row reverse reveal">
               <img
                 src="assets/images/project-2.jpg"
-                alt="Where2Live"
+                alt="Routine Care preview"
                 class="project-image"
-              />
+              >
 
               <div class="project-text">
-                <h4>Cadena Imóveis</h4>
-                <p>
-                  A real estate website for a São Paulo–based agency, focused on property presentation and direct client contact.
-                </p><br>
-                <a href="https://github.com/rdleocadio/cadena_imoveis" target="_blank" rel="noreferrer"><strong>View on GitHub</strong></a>
+                <h4 data-i18n="work.project2.title">Routine Care</h4>
+                <p data-i18n="work.project2.desc">
+                  A web application designed to help families manage care routines, appointments, and daily responsibilities in one place.
+                </p>
+
+                <div class="project-links">
+                  <a href="https://www.routine-care.me/" target="_blank" rel="noreferrer">
+                    <strong data-i18n="work.project2.live">Visit site</strong>
+                  </a>
+                  <a href="https://github.com/mauriciocastelobranco/routine-care" target="_blank" rel="noreferrer">
+                    <strong data-i18n="work.project2.github">View on GitHub</strong>
+                  </a>
+                </div>
               </div>
             </article>
+
             <!-- Project 3 -->
             <article class="project-row reveal">
               <img
-                src="assets/images/project-3.jpg"
-                alt="Find Your Plants"
+                src="assets/images/project-3.png"
+                alt="Felipe Dias preview"
                 class="project-image"
-              />
+              >
 
               <div class="project-text">
-                <h4>Nutricionista Alexandra Rabello</h4>
-                <p>
-                  Landing page built for a nutritionist, allowing clients to schedule appointments easily.
-                </p><br>
-                <a href="https://github.com/rdleocadio/alexandra_nutri" target="_blank" rel="noreferrer"><strong>View on GitHub</strong></a>
+                <h4 data-i18n="work.project3.title">Felipe Dias - Art director</h4>
+                <p data-i18n="work.project3.desc">
+                  A portfolio website for an art director, focused on visual storytelling, branding, and creative work.
+                </p>
+
+                <div class="project-links">
+                  <a href="https://rdleocadio.github.io/art_director_dias/" target="_blank" rel="noreferrer">
+                    <strong data-i18n="work.project3.live">Visit site</strong>
+                  </a>
+                  <a href="https://github.com/rdleocadio/art_director_dias" target="_blank" rel="noreferrer">
+                    <strong data-i18n="work.project3.github">View on GitHub</strong>
+                  </a>
+                </div>
               </div>
             </article>
           </div>
         </div>
+
         <div class="section-divider" aria-hidden="true"></div>
       </section>
-
 
       <!-- CONTACT -->
       <section class="section section--enter" id="contact">
         <div class="container">
           <div class="section__head reveal">
-            <h3 class="section__title">Send me a line</h3>
-            <p class="section__subtitle">
+            <h3 class="section__title" data-i18n="contact.title">Send me a line</h3>
+            <p class="section__subtitle" data-i18n="contact.subtitle">
               I'm always up for new ideas and collaborations. If you want to build something or just say hi, feel free to reach out.
             </p>
           </div>
 
-          <form class="form reveal" action="#" method="post">
+          <form class="form reveal" action="https://formspree.io/f/mojprgpg" method="POST">
             <div class="form__grid">
               <label class="field">
-                <span>Name</span>
-                <input type="text" name="name" placeholder="Your name">
+                <span data-i18n="contact.name">Name</span>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your name"
+                  required
+                  data-i18n-placeholder="contact.namePlaceholder"
+                >
               </label>
 
               <label class="field">
-                <span>Email</span>
-                <input type="email" name="email" placeholder="you@email.com">
+                <span data-i18n="contact.email">Email</span>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="you@email.com"
+                  required
+                  data-i18n-placeholder="contact.emailPlaceholder"
+                >
               </label>
 
               <label class="field field--full">
-                <span>Subject</span>
-                <input type="text" name="subject" placeholder="What's this about?">
+                <span data-i18n="contact.subject">Subject</span>
+                <input
+                  type="text"
+                  name="subject"
+                  placeholder="What's this about?"
+                  required
+                  data-i18n-placeholder="contact.subjectPlaceholder"
+                >
               </label>
 
               <label class="field field--full">
-                <span>Message</span>
-                <textarea name="message" rows="6" placeholder="Write your message..."></textarea>
+                <span data-i18n="contact.message">Message</span>
+                <textarea
+                  name="message"
+                  rows="6"
+                  placeholder="Write your message..."
+                  required
+                  data-i18n-placeholder="contact.messagePlaceholder"
+                ></textarea>
               </label>
             </div>
 
+            <input type="hidden" name="_captcha" value="false">
+
             <button class="btn btn--primary" type="submit">
-              <span>Send</span>
+              <span data-i18n="contact.send">Send</span>
               <i class="fa-solid fa-paper-plane"></i>
             </button>
           </form>
-          <div class="hero__social hero-anim" style="--d: 360ms" aria-label="Redes sociais">
-            <a class="social social--whatsapp" href="https://wa.me/5581994522790?text=Hi!%20I%20came%20across%20your%20portfolio%20and%20would%20love%20to%20connect." target="_blank" rel="noreferrer" aria-label="WhatsApp">
+
+          <div
+            class="hero__social hero-anim"
+            style="--d: 360ms"
+            aria-label="Social links"
+            data-i18n-aria-label="contact.socialAria"
+          >
+            <a
+              class="social social--whatsapp"
+              href="https://wa.me/5581994522790?text=Hi!%20I%20came%20across%20your%20portfolio%20and%20would%20love%20to%20connect."
+              target="_blank"
+              rel="noreferrer"
+              aria-label="WhatsApp"
+            >
               <i class="fa-brands fa-whatsapp"></i>
             </a>
 
-            <a class="social social--instagram" href="https://www.instagram.com/rd_leocadio/" target="_blank" rel="noreferrer" aria-label="Instagram">
+            <a
+              class="social social--instagram"
+              href="https://www.instagram.com/rd_leocadio/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Instagram"
+            >
               <i class="fa-brands fa-instagram"></i>
             </a>
 
-            <a class="social social--linkedin" href="https://www.linkedin.com/in/rdleocadio/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+            <a
+              class="social social--linkedin"
+              href="https://www.linkedin.com/in/rdleocadio/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn"
+            >
               <i class="fa-brands fa-linkedin"></i>
             </a>
 
-            <a class="social social--github" href="https://github.com/rdleocadio" target="_blank" rel="noreferrer" aria-label="GitHub">
+            <a
+              class="social social--github"
+              href="https://github.com/rdleocadio"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="GitHub"
+            >
               <i class="fa-brands fa-github"></i>
             </a>
           </div>
@@ -260,8 +446,10 @@
 
     <footer class="footer">
       <div class="container footer__inner">
-        <p>Built by Rodrigo Leocádio.</p>
+        <p data-i18n="footer.builtBy">Built by Rodrigo Leocádio.</p>
       </div>
     </footer>
- </body>
+
+    <script type="module" src="./assets/js/main.js"></script>
+  </body>
 </html>

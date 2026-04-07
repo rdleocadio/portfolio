@@ -32,9 +32,9 @@
   --sql: #2563eb;
   --vscode: #2563eb;
 
-  /*about*/
-  --about-bg-hover: #e2e8f0;          /* cinza claro */
-  --about-text-hover: #0b0c0f;        /* texto escuro */
+  /* about */
+  --about-bg-hover: #e2e8f0;
+  --about-text-hover: #0b0c0f;
   --about-muted-hover: rgba(11,12,15,.65);
 }
 
@@ -61,6 +61,10 @@ p{
 
 a{ color: inherit; text-decoration: none; }
 
+button{
+  font: inherit;
+}
+
 .container{
   width: min(var(--container), calc(100% - 48px));
   margin: 0 auto;
@@ -74,7 +78,6 @@ a{ color: inherit; text-decoration: none; }
   position: sticky;
   top: 0;
   z-index: 20;
-
   background: transparent;
   border-bottom: none;
   backdrop-filter: none;
@@ -86,7 +89,6 @@ a{ color: inherit; text-decoration: none; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   padding-left: 32px;
   padding-right: 32px;
 }
@@ -100,6 +102,8 @@ a{ color: inherit; text-decoration: none; }
   gap: 18px;
   align-items: center;
   margin-right: -6px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .nav__link{
@@ -116,6 +120,44 @@ a{ color: inherit; text-decoration: none; }
   background: rgba(255,255,255,.06);
   transform: translateY(-1px);
   border-color: rgba(255,255,255,.10);
+}
+
+.nav__langs{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 6px;
+}
+
+.lang-flag{
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.04);
+  transition: transform .18s ease, background .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+
+.lang-flag:hover{
+  transform: translateY(-1px);
+  background: rgba(255,255,255,.08);
+  border-color: rgba(255,255,255,.24);
+}
+
+.lang-flag.is-active{
+  border-color: rgba(255,255,255,.38);
+  background: rgba(255,255,255,.10);
+  box-shadow: 0 0 0 3px rgba(255,255,255,.05);
+}
+
+.lang-flag .fi{
+  font-size: 18px;
+  line-height: 1;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .logo-svg{
@@ -172,14 +214,12 @@ a{ color: inherit; text-decoration: none; }
   height: 1px;
   width: min(900px, 100%);
   margin: 160px auto 0;
-
   background: linear-gradient(
     90deg,
     transparent,
     rgba(255,255,255,.25),
     transparent
   );
-
   opacity: 0;
   transform: scaleX(.85);
   transition: opacity .8s ease, transform .8s ease;
@@ -193,26 +233,22 @@ a{ color: inherit; text-decoration: none; }
   height: 1px;
   width: min(900px, 100%);
   margin: 120px auto 0;
-
   background: linear-gradient(
     90deg,
     transparent,
     rgba(255,255,255,.22),
     transparent
   );
-
   opacity: 0;
   transform: scaleX(.85);
   transition: opacity .8s ease, transform .8s ease;
 }
 
-/* ativa quando a section entra */
 .section--enter.is-visible .section-divider{
   opacity: .75;
   transform: scaleX(1);
 }
 
-/* ativa quando o hero carrega */
 .hero--enter.is-loaded .hero-divider{
   opacity: .8;
   transform: scaleX(1);
@@ -241,28 +277,24 @@ a{ color: inherit; text-decoration: none; }
   transition: color .18s ease, filter .18s ease;
 }
 
-/* WHATSAPP */
 .social--whatsapp:hover{
   border-color: var(--whatsapp);
   background: rgba(34,197,94,.12);
 }
 .social--whatsapp:hover i{ color: var(--whatsapp); }
 
-/* INSTAGRAM */
 .social--instagram:hover{
   border-color: var(--instagram);
   background: rgba(225,29,72,.12);
 }
 .social--instagram:hover i{ color: var(--instagram); }
 
-/* LINKEDIN */
 .social--linkedin:hover{
   border-color: var(--linkedin);
   background: rgba(37,99,235,.12);
 }
 .social--linkedin:hover i{ color: var(--linkedin); }
 
-/* GITHUB */
 .social--github:hover{
   border-color: var(--github);
   background: rgba(156,163,175,.12);
@@ -303,7 +335,6 @@ a{ color: inherit; text-decoration: none; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-
   opacity: 0;
   transform: scale(1.04);
   transition: opacity .25s ease, transform .25s ease;
@@ -319,7 +350,7 @@ a{ color: inherit; text-decoration: none; }
   transform: scale(1.02);
 }
 
-/* HERO ENTER (stagger no load via --d) */
+/* HERO ENTER */
 .hero--enter .hero-anim{
   opacity: 0;
   transform: translateY(14px);
@@ -425,7 +456,6 @@ a{ color: inherit; text-decoration: none; }
   transition: transform .18s ease, background .18s ease, border-color .18s ease;
 }
 
-/* (mantive seu “hover amarelo” como fallback padrão) */
 .tool:hover{
   transform: translate(-2px);
   background: rgba(250, 204, 21, .08);
@@ -449,7 +479,6 @@ a{ color: inherit; text-decoration: none; }
   transition: color .18s ease, filter .18s ease;
 }
 
-/* RUBY + RAILS */
 .tool--ruby:hover,
 .tool--rails:hover{
   border-color: var(--ruby);
@@ -462,7 +491,6 @@ a{ color: inherit; text-decoration: none; }
   color: var(--ruby);
 }
 
-/* HTML */
 .tool--html:hover{
   border-color: var(--html);
   background: rgba(249,115,22,.08);
@@ -472,7 +500,6 @@ a{ color: inherit; text-decoration: none; }
   color: var(--html);
 }
 
-/* CSS */
 .tool--css:hover{
   border-color: var(--css);
   background: rgba(59,130,246,.08);
@@ -482,7 +509,6 @@ a{ color: inherit; text-decoration: none; }
   color: var(--css);
 }
 
-/* JAVASCRIPT */
 .tool--js:hover{
   border-color: var(--js);
   background: rgba(250,204,21,.08);
@@ -492,7 +518,6 @@ a{ color: inherit; text-decoration: none; }
   color: var(--js);
 }
 
-/* SQL */
 .tool--sql:hover{
   border-color: var(--sql);
   background: rgba(37,99,235,.08);
@@ -502,7 +527,6 @@ a{ color: inherit; text-decoration: none; }
   color: var(--sql);
 }
 
-/* GITHUB */
 .tool--github:hover{
   border-color: var(--github);
   background: rgba(156,163,175,.08);
@@ -512,7 +536,6 @@ a{ color: inherit; text-decoration: none; }
   color: var(--github);
 }
 
-/* VSCODE */
 .tool--vscode:hover{
   border-color: var(--vscode);
   background: rgba(37,99,235,.08);
@@ -523,7 +546,7 @@ a{ color: inherit; text-decoration: none; }
 }
 
 /* =========================
-   WORK — EDITORIAL (FIX FINAL)
+   WORK — EDITORIAL
    ========================= */
 
 .projects.editorial{
@@ -533,15 +556,13 @@ a{ color: inherit; text-decoration: none; }
   margin-top: 40px;
 }
 
-/* cada projeto */
 .project-row{
   display: grid;
-  grid-template-columns: 200px 1fr; /* 🔒 imagem pequena */
+  grid-template-columns: 200px 1fr;
   gap: 32px;
   align-items: center;
 }
 
-/* alterna imagem */
 .project-row.reverse{
   grid-template-columns: 1fr 200px;
   text-align: right;
@@ -551,30 +572,25 @@ a{ color: inherit; text-decoration: none; }
   order: 2;
 }
 
-/* IMAGEM — TRAVADA DE VERDADE */
 .project-image{
-  width: 200px;        /* 🔒 largura fixa */
-  height: 130px;       /* 🔒 altura fixa */
+  width: 200px;
+  height: 130px;
   max-width: 200px;
   max-height: 130px;
-
-  object-fit: cover;
+  object-fit: auto;
   display: block;
-
   border-radius: 14px;
   border: 1px solid rgba(255,255,255,.10);
   background: rgba(255,255,255,.03);
-
   transition: filter .25s ease, transform .25s ease;
 }
 
-/* TEXTO */
 .project-text{
   max-width: 52ch;
 }
 
 .project-row.reverse .project-text{
-  margin-left: auto;   /* empurra o texto para perto da imagem */
+  margin-left: auto;
 }
 
 .project-text h4{
@@ -589,10 +605,19 @@ a{ color: inherit; text-decoration: none; }
   line-height: 1.6;
 }
 
-/* LINK SIMPLES */
+.project-links{
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.project-row.reverse .project-links{
+  align-items: flex-end;
+}
+
 .project-text a{
   display: inline-block;
-  margin-top: 6px;
   font-size: 13px;
   font-weight: 500;
   opacity: .75;
@@ -601,27 +626,6 @@ a{ color: inherit; text-decoration: none; }
 .project-text a:hover{
   opacity: 1;
   text-decoration: underline;
-}
-
-/* =========================
-   MOBILE
-   ========================= */
-
-@media (max-width: 900px){
-  .project-row,
-  .project-row.reverse{
-    grid-template-columns: 1fr;
-  }
-
-  .project-row.reverse .project-image{
-    order: 0;
-  }
-
-  .project-image{
-    width: 100%;
-    max-width: 100%;
-    height: 180px;   /* tamanho confortável no mobile */
-  }
 }
 
 /* =========================
@@ -643,8 +647,8 @@ a{ color: inherit; text-decoration: none; }
 }
 
 #contact .hero__social{
-  justify-content: center;   /* centraliza horizontalmente */
-  margin-top: 48px;          /* espaço entre botão e ícones */
+  justify-content: center;
+  margin-top: 48px;
 }
 
 .form{
@@ -747,7 +751,7 @@ input:focus, textarea:focus{
 }
 
 /* =========================
-   SCROLL STAGGER (por seção)
+   SCROLL STAGGER
    ========================= */
 
 .section--enter .reveal{
@@ -772,14 +776,73 @@ input:focus, textarea:focus{
    ========================= */
 
 @media (max-width: 900px){
-  .hero__grid{ grid-template-columns: 1fr; }
-  .tools__grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .form__grid{ grid-template-columns: 1fr; }
+  .hero__grid{
+    grid-template-columns: 1fr;
+  }
+
+  .hero__photo{
+    margin: 0 auto;
+  }
+
+  .avatar{
+    margin: 0 auto;
+  }
+
+  .tools__grid{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .form__grid{
+    grid-template-columns: 1fr;
+  }
+
+  .project-row,
+  .project-row.reverse{
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .project-row.reverse .project-image{
+    order: 0;
+  }
+
+  .project-row.reverse .project-text{
+    margin-left: 0;
+  }
+
+  .project-row.reverse .project-links{
+    align-items: flex-start;
+  }
+
+  .project-image{
+    width: 100%;
+    max-width: 100%;
+    height: 180px;
+  }
 }
 
-@media (max-width: 1000px){
-  .projects{
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+@media (max-width: 720px){
+  .nav{
+    margin-top: 20px;
+  }
+
+  .nav__inner{
+    height: auto;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .nav__links{
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .nav__langs{
+    order: 4;
+    width: 100%;
+    justify-content: center;
+    margin-left: 0;
+    margin-top: 6px;
   }
 }
 
