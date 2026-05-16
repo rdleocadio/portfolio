@@ -52,6 +52,13 @@ export const translations = {
         desc: "A portfolio website for an art director, focused on visual storytelling, branding, and creative work.",
         live: "Visit site",
         github: "View on GitHub"
+      },
+
+      project4: {
+        title: "Bolão Canarinho",
+        desc: "A responsive World Cup betting platform where users can create leagues, make predictions, track rankings, and follow real-time tournament standings.",
+        live: "Visit site",
+        github: "View on GitHub"
       }
     },
 
@@ -128,6 +135,13 @@ export const translations = {
         desc: "Um site de portfólio para um diretor de arte, com foco em narrativa visual, branding e trabalhos criativos.",
         live: "Visitar site",
         github: "Ver no GitHub"
+      },
+
+      project4: {
+        title: "Bolão Canarinho",
+        desc: "Uma plataforma web responsiva de bolão da Copa do Mundo, onde usuários podem criar ligas, fazer palpites, acompanhar rankings e visualizar a classificação em tempo real.",
+        live: "Visitar site",
+        github: "Ver no GitHub"
       }
     },
 
@@ -202,6 +216,13 @@ export const translations = {
       project3: {
         title: "Felipe Dias - Director de Arte",
         desc: "Un sitio de portafolio para un director de arte, enfocado en narrativa visual, branding y trabajo creativo.",
+        live: "Visitar sitio",
+        github: "Ver en GitHub"
+      },
+
+      project4: {
+        title: "Bolão Canarinho",
+        desc: "Una plataforma web responsiva de quiniela para la Copa del Mundo, donde los usuarios pueden crear ligas, hacer predicciones, seguir rankings y ver la clasificación en tiempo real.",
         live: "Visitar sitio",
         github: "Ver en GitHub"
       }
